@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PostCard from "../components/PostCard.astro";
+import PostVisual from "../components/PostVisual.astro";
+import { posts, levels, formatDate, postCategory } from "../lib/site";
+
+const [featured, ...rest] = posts;
+const sidePosts = rest.slice(0, 2);
+const news = posts.filter((post) => post.categories.some((category) => category.slug === "berita-digital")).slice(0, 6);
+---
+<BaseLayout>
+  <main id="main-content" class="container">
+    <section class="learning-hero">
+      <div>
+        <p class="hero-kicker">Belajar terarah, praktik bertahap</p>
+        <h1>Mulai dari dasar.<br />Naik level dengan percaya diri.</h1>
+        <p>Ikuti jalur belajar teknologi yang tersusun dari Basic sampai Expert. Setiap materi membantu Anda membangun kemampuan yang bisa langsung dipraktikkan.</p>
+        <div class="hero-actions"><a class="primary-button" href="/kategori/tutorial-basic/">Mulai dari Basic</a><a class="secondary-button" href="#jalur-belajar">Lihat semua level</a></div>
+      </div>
+      <ol class="level-map">
+        {levels.map((level, index) => <li class={level.className}><span>{String(index + 1).padStart(2, "0")}</span><strong>{level.label}</strong></li>)}
+      </ol>
+    </section>
+
+    {featured && (
+      <>
+        <div class="ticker"><strong>Terbaru</strong><a href={`/artikel/${featured.slug}/`}>{featured.title}</a><time>{formatDate(featured.date)}</time></div>
+        <section class="featured-grid" aria-label="Artikel pilihan">
+          <article class="featured-post">
+            <PostVisual image={featured.featuredImage} alt={featured.featuredAlt} category={postCategory(featured).name} eager />
+            <div><span class="badge">{postCategory(featured).name}</span><h2><a href={`/artikel/${featured.slug}/`}>{featured.title}</a></h2><p>{formatDate(featured.date)} · {featured.readingMinutes} menit baca</p></div>
+          </article>
+          <div class="featured-side">{sidePosts.map((post) => <PostCard post={post} compact />)}</div>
+        </section>
+      </>
+    )}
+
+    <section id="berita" class="content-section">
+      <div class="section-heading"><h2>Berita Digital</h2><a href="/kategori/berita-digital/">Lihat semua berita →</a></div>
+      <div class="news-grid">{news.map((post) => <PostCard post={post} />)}</div>
+    </section>
+
+    <section id="jalur-belajar" class="content-section">
+      <div class="section-heading"><h2>Tutorial: Basic sampai Expert</h2></div>
+      <p class="section-intro">Pilih level sesuai kemampuan Anda. Jika baru mulai, ikuti urutannya dari Basic.</p>
+      <div class="learning-levels">
+        {levels.map((level, index) => {
+          const levelPosts = posts.filter((post) => post.categories.some((category) => category.slug === level.slug));
+          return (
+            <article class={`learning-level ${level.className}`}>
+              <div class="level-title"><span>{String(index + 1).padStart(2, "0")}</span><div><small>{level.label}</small><h3>{level.title}</h3></div></div>
+              <p>{level.description}</p>
+              <div class="level-count">{levelPosts.length} materi</div>
+              <ol>{levelPosts.slice(0, 5).map((post) => <li><a href={`/artikel/${post.slug}/`}>{post.title}</a></li>)}</ol>
+              <a class="level-action" href={`/kategori/${level.slug}/`}>Pelajari level {level.label} →</a>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

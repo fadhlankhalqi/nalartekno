@@ -1,0 +1,9 @@
+---
+interface Props { image?: string; alt?: string; category: string; eager?: boolean; }
+const { image, alt = "", category, eager = false } = Astro.props;
+---
+{image ? (
+  <img src={image} alt={alt} width="800" height="500" loading={eager ? "eager" : "lazy"} fetchpriority={eager ? "high" : "auto"} />
+) : (
+  <span class="post-visual-fallback" aria-hidden="true"><b>DG</b><small>{category}</small></span>
+)}

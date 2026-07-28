@@ -1,0 +1,43 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+wp-config.php
+*.sql
+*.sqlite
+
+# WordPress core and local runtime
+/wp-admin/
+/wp-includes/
+/wp-*.php
+/index.php
+/xmlrpc.php
+/.htaccess
+/license.txt
+/readme.html
+/wp-content/plugins/
+/wp-content/uploads/
+/wp-content/cache/
+/wp-content/upgrade/
+
+# Keep only the custom theme
+/wp-content/themes/*
+!/wp-content/themes/dgworld-theme/
+
+# Frontend generated files
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.astro/
+/frontend/public/media/*
+!/frontend/public/media/.gitkeep
+
+# Local QA and tooling artifacts
+*.png
+/.impeccable/
+/.claude/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

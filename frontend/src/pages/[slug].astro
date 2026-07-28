@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { pages } from "../lib/site";
+
+export function getStaticPaths() {
+  return pages.map((page) => ({ params: { slug: page.slug }, props: { page } }));
+}
+
+interface Props { page: { id: number; slug: string; title: string; content: string }; }
+const { page } = Astro.props;
+---
+<BaseLayout title={`${page.title} | DGworld`}>
+  <main id="main-content" class="container info-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Beranda</a><span>/</span><span>{page.title}</span></nav>
+    <article><h1>{page.title}</h1><div class="article-content" set:html={page.content} /></article>
+  </main>
+</BaseLayout>

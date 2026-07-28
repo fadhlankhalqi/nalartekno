@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PostCard from "../../components/PostCard.astro";
+import { categories, posts, type Category } from "../../lib/site";
+
+export function getStaticPaths() {
+  return categories.map((category) => ({ params: { slug: category.slug }, props: { category } }));
+}
+
+interface Props { category: Category; }
+const { category } = Astro.props;
+const categoryPosts = posts.filter((post) => post.categories.some((item) => item.id === category.id));
+---
+<BaseLayout title={`${category.name} | DGworld`} description={category.description || `Artikel dan tutorial ${category.name} di DGworld.`}>
+  <main id="main-content" class="container archive-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Beranda</a><span>/</span><span>{category.name}</span></nav>
+    <header><h1>{category.name}</h1><p>{category.description || `${categoryPosts.length} materi untuk membantu Anda belajar dan mengikuti perkembangan teknologi.`}</p></header>
+    {categoryPosts.length ? <div class="archive-grid">{categoryPosts.map((post) => <PostCard post={post} />)}</div> : <div class="empty-state"><h2>Materi sedang disiapkan</h2><p>Mulai dari level sebelumnya atau kembali lagi setelah materi baru diterbitkan.</p><a class="primary-button" href="/">Kembali ke Beranda</a></div>}
+  </main>
+</BaseLayout>

@@ -1,0 +1,7 @@
+node_modules
+dist
+.astro
+.env
+*.png
+public/media/*
+!public/media/.gitkeep
