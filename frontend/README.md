@@ -1,6 +1,6 @@
-# DGworld Frontend
+# NalarTekno Frontend
 
-Frontend publik statis untuk DGworld. WordPress lokal tetap menjadi CMS dan ruang editorial.
+Frontend publik statis untuk NalarTekno. WordPress lokal tetap menjadi CMS dan ruang editorial.
 
 ## Alur kerja
 

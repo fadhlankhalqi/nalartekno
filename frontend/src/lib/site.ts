@@ -32,5 +32,5 @@ export function formatDate(value: string) {
 }
 
 export function postCategory(post: Post) {
-  return post.categories[0] || { id: 0, name: "DGworld", slug: "" };
+  return post.categories[0] || { id: 0, name: "NalarTekno", slug: "" };
 }

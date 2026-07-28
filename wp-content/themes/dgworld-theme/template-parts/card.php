@@ -3,7 +3,7 @@
 	<a href="<?php the_permalink(); ?>" class="thumb">
 		<?php if ( has_post_thumbnail() ) : the_post_thumbnail( 'dgworld-card' ); else : ?>
 			<span class="thumb-placeholder <?php echo esc_attr( sanitize_html_class( get_post_type() . '-' . dgworld_first_category_name() ) ); ?>" aria-hidden="true">
-				<span>DG</span><strong><?php echo esc_html( dgworld_first_category_name() ); ?></strong>
+				<span>NT</span><strong><?php echo esc_html( dgworld_first_category_name() ); ?></strong>
 			</span>
 		<?php endif; ?>
 	</a>

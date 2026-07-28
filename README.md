@@ -1,6 +1,6 @@
-# DGworld
+# NalarTekno
 
-DGworld adalah platform belajar teknologi berbahasa Indonesia dengan jalur Basic sampai Expert dan berita digital sebagai konten pendukung.
+NalarTekno adalah platform belajar teknologi berbahasa Indonesia dengan jalur Basic sampai Expert dan berita digital sebagai konten pendukung.
 
 ## Arsitektur
 

@@ -1,11 +1,11 @@
 <?php
 /**
- * DGworld theme functions
+ * NalarTekno theme functions
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'DGWORLD_VERSION', '1.4.0' );
+define( 'NALARTEKNO_VERSION', '1.4.0' );
 
 function dgworld_setup() {
 	add_theme_support( 'title-tag' );
@@ -31,8 +31,8 @@ function dgworld_scripts() {
 		array(),
 		null
 	);
-	wp_enqueue_style( 'dgworld-style', get_stylesheet_uri(), array( 'dgworld-fonts' ), DGWORLD_VERSION );
-	wp_enqueue_script( 'dgworld-script', get_template_directory_uri() . '/script.js', array(), DGWORLD_VERSION, true );
+	wp_enqueue_style( 'dgworld-style', get_stylesheet_uri(), array( 'dgworld-fonts' ), NALARTEKNO_VERSION );
+	wp_enqueue_script( 'dgworld-script', get_template_directory_uri() . '/script.js', array(), NALARTEKNO_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'dgworld_scripts' );
 
@@ -155,7 +155,7 @@ function dgworld_default_menu() {
 
 function dgworld_first_category_name() {
 	$cats = get_the_category();
-	return ! empty( $cats ) ? $cats[0]->name : 'DGworld';
+	return ! empty( $cats ) ? $cats[0]->name : 'NalarTekno';
 }
 
 function dgworld_format_date( $timestamp = null, $include_weekday = false ) {

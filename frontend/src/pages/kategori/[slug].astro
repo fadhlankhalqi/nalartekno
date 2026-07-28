@@ -11,7 +11,7 @@ interface Props { category: Category; }
 const { category } = Astro.props;
 const categoryPosts = posts.filter((post) => post.categories.some((item) => item.id === category.id));
 ---
-<BaseLayout title={`${category.name} | DGworld`} description={category.description || `Artikel dan tutorial ${category.name} di DGworld.`}>
+<BaseLayout title={`${category.name} | NalarTekno`} description={category.description || `Artikel dan tutorial ${category.name} di NalarTekno.`}>
   <main id="main-content" class="container archive-page">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Beranda</a><span>/</span><span>{category.name}</span></nav>
     <header><h1>{category.name}</h1><p>{category.description || `${categoryPosts.length} materi untuk membantu Anda belajar dan mengikuti perkembangan teknologi.`}</p></header>

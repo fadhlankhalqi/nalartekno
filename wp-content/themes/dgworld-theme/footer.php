@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="footer-grid">
 				<div>
-					<h4>DGworld</h4>
+					<h4>NalarTekno</h4>
 					<p><?php bloginfo( 'description' ); ?></p>
 				</div>
 				<div>
@@ -21,7 +21,7 @@
 					<ul>
 						<?php wp_nav_menu( array( 'theme_location' => 'footer', 'container' => false, 'fallback_cb' => false, 'items_wrap' => '%3$s' ) ); ?>
 						<?php if ( ! has_nav_menu( 'footer' ) ) : ?>
-							<li><a href="<?php echo esc_url( home_url( '/tentang/' ) ); ?>">Tentang DGworld</a></li>
+							<li><a href="<?php echo esc_url( home_url( '/tentang/' ) ); ?>">Tentang NalarTekno</a></li>
 							<li><a href="<?php echo esc_url( home_url( '/pedoman-editorial/' ) ); ?>">Pedoman Editorial</a></li>
 							<li><a href="<?php echo esc_url( home_url( '/kontak/' ) ); ?>">Kontak</a></li>
 							<li><a href="<?php echo esc_url( get_privacy_policy_url() ?: home_url( '/kebijakan-privasi/' ) ); ?>">Kebijakan Privasi</a></li>
@@ -30,7 +30,7 @@
 				</div>
 			</div>
 			<div class="footer-bottom">
-				&copy; <?php echo esc_html( date( 'Y' ) ); ?> DGworld. Semua hak dilindungi.
+				&copy; <?php echo esc_html( date( 'Y' ) ); ?> NalarTekno. Semua hak dilindungi.
 			</div>
 		</div>
 	</footer>

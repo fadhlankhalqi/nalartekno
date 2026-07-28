@@ -89,7 +89,7 @@ for (let index = 0; index < rawPosts.length; index += 1) {
     content: await localizeContent(post.content.rendered, index),
     date: post.date,
     modified: post.modified,
-    author: author?.name || "Tim DGworld",
+    author: author?.name || "Tim NalarTekno",
     categories: post.categories.map((id) => {
       const category = categoryById.get(id);
       return category ? { id, name: category.name, slug: category.slug } : null;

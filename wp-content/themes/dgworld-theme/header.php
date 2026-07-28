@@ -20,7 +20,7 @@
 	<div class="container site-header-inner">
 		<div class="site-branding">
 			<?php if ( has_custom_logo() ) : the_custom_logo(); else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><span class="brand-mark">DG</span><span>world</span></a></p>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><span class="brand-mark">NT</span><span>NalarTekno</span></a></p>
 			<?php endif; ?>
 		</div>
 		<nav class="primary-nav" id="primary-navigation" aria-label="Menu Utama">

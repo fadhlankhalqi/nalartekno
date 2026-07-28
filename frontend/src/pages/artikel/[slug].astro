@@ -12,7 +12,7 @@ const { post } = Astro.props;
 const category = postCategory(post);
 const related = posts.filter((candidate) => candidate.id !== post.id && candidate.categories.some((item) => item.slug === category.slug)).slice(0, 3);
 ---
-<BaseLayout title={`${post.title} | DGworld`} description={post.excerpt} image={post.featuredImage}>
+<BaseLayout title={`${post.title} | NalarTekno`} description={post.excerpt} image={post.featuredImage}>
   <main id="main-content" class="container article-shell">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Beranda</a><span>/</span><a href={`/kategori/${category.slug}/`}>{category.name}</a></nav>
     <article data-pagefind-body>

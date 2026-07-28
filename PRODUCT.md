@@ -10,7 +10,7 @@ Pembaca umum hingga profesional pemula yang ingin memahami berita dan keterampil
 
 ## Product Purpose
 
-DGworld menyajikan berita digital dan tutorial teknologi berjenjang dalam bahasa yang mudah dipahami. Keberhasilan produk berarti pembaca dapat menemukan materi yang relevan dengan cepat, membaca tanpa hambatan, memahami topik yang rumit, dan melanjutkan ke tingkat pembelajaran berikutnya.
+NalarTekno menyajikan berita digital dan tutorial teknologi berjenjang dalam bahasa yang mudah dipahami. Keberhasilan produk berarti pembaca dapat menemukan materi yang relevan dengan cepat, membaca tanpa hambatan, memahami topik yang rumit, dan melanjutkan ke tingkat pembelajaran berikutnya.
 
 ## Brand Personality
 

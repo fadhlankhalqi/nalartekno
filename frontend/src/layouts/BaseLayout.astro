@@ -9,7 +9,7 @@ interface Props {
 }
 
 const {
-  title = "DGworld | Belajar Teknologi dari Dasar sampai Mahir",
+  title = "NalarTekno | Belajar Teknologi dari Dasar sampai Mahir",
   description = "Tutorial teknologi berjenjang dan berita digital dalam bahasa yang mudah dipahami.",
   image
 } = Astro.props;
@@ -45,7 +45,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
         </div>
       </div>
       <div class="container header-main">
-        <a class="brand" href="/" aria-label="DGworld, beranda"><span>DG</span><strong>world</strong></a>
+        <a class="brand" href="/" aria-label="NalarTekno, beranda"><span>NT</span><strong>NalarTekno</strong></a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Buka menu"><i></i><i></i></button>
         <nav id="main-nav" aria-label="Menu utama">
           <a href="/">Beranda</a>
@@ -68,11 +68,11 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <slot />
     <footer>
       <div class="container footer-grid">
-        <div><h2>DGworld</h2><p>Berita digital dan tutorial dari Basic sampai Expert.</p></div>
+        <div><h2>NalarTekno</h2><p>Berita digital dan tutorial dari Basic sampai Expert.</p></div>
         <div><h2>Kategori</h2>{levels.map((level) => <a href={`/kategori/${level.slug}/`}>Tutorial {level.label}</a>)}</div>
-        <div><h2>Informasi</h2><a href="/tentang/">Tentang DGworld</a><a href="/pedoman-editorial/">Pedoman Editorial</a><a href="/kontak/">Kontak</a><a href="/kebijakan-privasi/">Kebijakan Privasi</a></div>
+        <div><h2>Informasi</h2><a href="/tentang/">Tentang NalarTekno</a><a href="/pedoman-editorial/">Pedoman Editorial</a><a href="/kontak/">Kontak</a><a href="/kebijakan-privasi/">Kebijakan Privasi</a></div>
       </div>
-      <div class="container copyright">© {new Date().getFullYear()} DGWORLD. SEMUA HAK DILINDUNGI.</div>
+      <div class="container copyright">© {new Date().getFullYear()} NALARTEKNO. SEMUA HAK DILINDUNGI.</div>
     </footer>
     <script>
       const toggle = document.querySelector(".nav-toggle");

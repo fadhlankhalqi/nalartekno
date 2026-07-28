@@ -9,7 +9,7 @@
       "content": "<p>Pelajari pola arsitektur microservices untuk sistem skala besar, termasuk service mesh dan observability.</p>\n",
       "date": "2026-07-26T13:30:21",
       "modified": "2026-07-26T13:30:21",
-      "author": "Tim DGworld",
+      "author": "Tim NalarTekno",
       "categories": [
         {
           "id": 7,
@@ -29,7 +29,7 @@
       "content": "<p>Tutorial membangun REST API sederhana menggunakan Express.js dan menghubungkannya ke database.</p>\n",
       "date": "2026-07-26T13:30:19",
       "modified": "2026-07-26T13:30:19",
-      "author": "Tim DGworld",
+      "author": "Tim NalarTekno",
       "categories": [
         {
           "id": 6,
@@ -49,7 +49,7 @@
       "content": "<p>HTML dan CSS adalah fondasi membangun halaman web. Pelajari struktur dasar tag dan styling.</p>\n",
       "date": "2026-07-26T13:30:17",
       "modified": "2026-07-26T13:30:17",
-      "author": "Tim DGworld",
+      "author": "Tim NalarTekno",
       "categories": [
         {
           "id": 5,
@@ -69,7 +69,7 @@
       "content": "<p>Panduan langkah demi langkah membuat akun email pertama dan mengenal fungsi dasar browser.</p>\n",
       "date": "2026-07-26T13:30:15",
       "modified": "2026-07-26T13:30:15",
-      "author": "Tim DGworld",
+      "author": "Tim NalarTekno",
       "categories": [
         {
           "id": 4,
@@ -89,7 +89,7 @@
       "content": "<p>Internet adalah jaringan global yang menghubungkan miliaran perangkat. Artikel ini membahas dasar-dasar cara kerja internet.</p>\n",
       "date": "2026-07-26T13:30:13",
       "modified": "2026-07-26T13:30:13",
-      "author": "Tim DGworld",
+      "author": "Tim NalarTekno",
       "categories": [
         {
           "id": 4,
@@ -109,7 +109,7 @@
       "content": "<p>Ancaman siber terus berkembang. Berikut ringkasan tren keamanan digital yang perlu diwaspadai tahun ini.</p>\n",
       "date": "2026-07-26T13:30:12",
       "modified": "2026-07-26T13:30:12",
-      "author": "Tim DGworld",
+      "author": "Tim NalarTekno",
       "categories": [
         {
           "id": 2,
@@ -129,7 +129,7 @@
       "content": "<p>Sejumlah startup teknologi lokal kini merilis fitur berbasis cloud computing untuk meningkatkan skalabilitas layanan mereka.</p>\n",
       "date": "2026-07-26T13:30:10",
       "modified": "2026-07-26T13:30:10",
-      "author": "Tim DGworld",
+      "author": "Tim NalarTekno",
       "categories": [
         {
           "id": 2,
@@ -149,7 +149,7 @@
       "content": "<p>Perkembangan AI generatif terus mempercepat berbagai aspek kehidupan digital, mulai dari asisten virtual hingga otomasi konten.</p>\n<p>Artikel ini membahas tren terbaru dan dampaknya bagi pengguna internet di Indonesia.</p>\n",
       "date": "2026-07-26T13:30:08",
       "modified": "2026-07-26T13:30:08",
-      "author": "Tim DGworld",
+      "author": "Tim NalarTekno",
       "categories": [
         {
           "id": 2,
@@ -218,25 +218,25 @@
       "id": 19,
       "slug": "kebijakan-privasi",
       "title": "Kebijakan Privasi",
-      "content": "<p>DGworld menghargai privasi pembaca. Halaman ini menjelaskan data yang dikumpulkan, alasan penggunaannya, layanan pihak ketiga yang digunakan, dan cara pembaca mengajukan permintaan terkait data pribadi.</p>\n<p>Lengkapi kebijakan ini sesuai layanan analitik, periklanan, formulir, dan cookie yang digunakan sebelum situs dipublikasikan.</p>\n"
+      "content": "<p>NalarTekno menghargai privasi pembaca. Halaman ini menjelaskan data yang dikumpulkan, alasan penggunaannya, layanan pihak ketiga yang digunakan, dan cara pembaca mengajukan permintaan terkait data pribadi.</p>\n<p>Lengkapi kebijakan ini sesuai layanan analitik, periklanan, formulir, dan cookie yang digunakan sebelum situs dipublikasikan.</p>\n"
     },
     {
       "id": 18,
       "slug": "kontak",
       "title": "Kontak",
-      "content": "<p>Gunakan halaman ini untuk menyampaikan pertanyaan, koreksi artikel, atau usulan topik kepada tim DGworld.</p>\n<p>Tambahkan alamat email editorial atau formulir kontak resmi melalui editor WordPress sebelum situs dipublikasikan.</p>\n"
+      "content": "<p>Gunakan halaman ini untuk menyampaikan pertanyaan, koreksi artikel, atau usulan topik kepada tim NalarTekno.</p>\n<p>Tambahkan alamat email editorial atau formulir kontak resmi melalui editor WordPress sebelum situs dipublikasikan.</p>\n"
     },
     {
       "id": 17,
       "slug": "pedoman-editorial",
       "title": "Pedoman Editorial",
-      "content": "<p>DGworld menerbitkan tutorial dan berita teknologi yang mengutamakan ketepatan, konteks, dan manfaat praktis.</p>\n<h2>Prinsip kami</h2>\n<ul>\n<li>Memeriksa fakta dan sumber sebelum publikasi.</li>\n<li>Membedakan berita, opini, dan materi sponsor dengan jelas.</li>\n<li>Memperbarui tutorial ketika teknologi atau praktik berubah.</li>\n<li>Memperbaiki kesalahan secara terbuka dan secepat mungkin.</li>\n</ul>\n"
+      "content": "<p>NalarTekno menerbitkan tutorial dan berita teknologi yang mengutamakan ketepatan, konteks, dan manfaat praktis.</p>\n<h2>Prinsip kami</h2>\n<ul>\n<li>Memeriksa fakta dan sumber sebelum publikasi.</li>\n<li>Membedakan berita, opini, dan materi sponsor dengan jelas.</li>\n<li>Memperbarui tutorial ketika teknologi atau praktik berubah.</li>\n<li>Memperbaiki kesalahan secara terbuka dan secepat mungkin.</li>\n</ul>\n"
     },
     {
       "id": 16,
       "slug": "tentang",
-      "title": "Tentang DGworld",
-      "content": "<p>DGworld membantu pembaca Indonesia mempelajari teknologi secara bertahap, dari fondasi digital sampai pengembangan sistem berskala.</p>\n<h2>Cara kami menyusun materi</h2>\n<p>Tutorial dikelompokkan dalam empat level: Basic, Intermediate, Advanced, dan Expert. Setiap materi mengutamakan penjelasan yang jelas, contoh praktis, dan jalur belajar yang mudah dilanjutkan.</p>\n"
+      "title": "Tentang NalarTekno",
+      "content": "<p>NalarTekno membantu pembaca Indonesia mempelajari teknologi secara bertahap, dari fondasi digital sampai pengembangan sistem berskala.</p>\n<h2>Cara kami menyusun materi</h2>\n<p>Tutorial dikelompokkan dalam empat level: Basic, Intermediate, Advanced, dan Expert. Setiap materi mengutamakan penjelasan yang jelas, contoh praktis, dan jalur belajar yang mudah dilanjutkan.</p>\n"
     },
     {
       "id": 2,
