@@ -1,0 +1,54 @@
+name: Sync WordPress content
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/15 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: wordpress-content-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    env:
+      WP_BASE_URL: https://nalartekno.wordpress.com
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync WordPress content
+        run: npm run sync
+
+      - name: Commit content changes
+        working-directory: .
+        shell: bash
+        run: |
+          if git diff --quiet -- frontend/src/data/site.json frontend/public/media; then
+            echo "No WordPress content changes."
+            exit 0
+          fi
+
+          git config user.name "nalartekno-content-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add frontend/src/data/site.json frontend/public/media
+          git commit -m "content: sync WordPress updates"
+          git push
