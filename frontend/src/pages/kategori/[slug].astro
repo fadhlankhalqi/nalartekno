@@ -1,20 +1,24 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import PostCard from "../../components/PostCard.astro";
-import { categories, posts, type Category } from "../../lib/site";
+import { getSiteData, setContentCacheHeaders } from "../../lib/wordpress";
 
-export function getStaticPaths() {
-  return categories.map((category) => ({ params: { slug: category.slug }, props: { category } }));
+setContentCacheHeaders(Astro.response);
+const { slug } = Astro.params;
+const { categories, posts } = await getSiteData();
+const category = categories.find((candidate) => candidate.slug === slug);
+
+if (!category) {
+  Astro.response.status = 404;
+  return Astro.rewrite("/404/");
 }
 
-interface Props { category: Category; }
-const { category } = Astro.props;
 const categoryPosts = posts.filter((post) => post.categories.some((item) => item.id === category.id));
 ---
 <BaseLayout title={`${category.name} | NalarTekno`} description={category.description || `Artikel dan tutorial ${category.name} di NalarTekno.`}>
   <main id="main-content" class="container archive-page">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Beranda</a><span>/</span><span>{category.name}</span></nav>
-    <header><h1>{category.name}</h1><p>{category.description || `${categoryPosts.length} materi untuk membantu Anda belajar dan mengikuti perkembangan teknologi.`}</p></header>
-    {categoryPosts.length ? <div class="archive-grid">{categoryPosts.map((post) => <PostCard post={post} />)}</div> : <div class="empty-state"><h2>Materi sedang disiapkan</h2><p>Mulai dari level sebelumnya atau kembali lagi setelah materi baru diterbitkan.</p><a class="primary-button" href="/">Kembali ke Beranda</a></div>}
+    <header><h1>{category.name}</h1><p>{category.description || `${categoryPosts.length} artikel untuk membantu Anda belajar dan mengikuti perkembangan teknologi.`}</p></header>
+    {categoryPosts.length ? <div class="archive-grid">{categoryPosts.map((post) => <PostCard post={post} />)}</div> : <div class="empty-state"><h2>Artikel sedang disiapkan</h2><p>Kembali lagi setelah artikel baru diterbitkan.</p><a class="primary-button" href="/">Kembali ke Beranda</a></div>}
   </main>
 </BaseLayout>

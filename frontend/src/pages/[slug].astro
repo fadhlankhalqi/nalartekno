@@ -1,13 +1,16 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { pages } from "../lib/site";
+import { getSiteData, setContentCacheHeaders } from "../lib/wordpress";
 
-export function getStaticPaths() {
-  return pages.map((page) => ({ params: { slug: page.slug }, props: { page } }));
+setContentCacheHeaders(Astro.response);
+const { slug } = Astro.params;
+const { pages } = await getSiteData();
+const page = pages.find((candidate) => candidate.slug === slug);
+
+if (!page) {
+  Astro.response.status = 404;
+  return Astro.rewrite("/404/");
 }
-
-interface Props { page: { id: number; slug: string; title: string; content: string }; }
-const { page } = Astro.props;
 ---
 <BaseLayout title={`${page.title} | NalarTekno`}>
   <main id="main-content" class="container info-page">

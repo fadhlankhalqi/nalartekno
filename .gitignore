@@ -28,6 +28,7 @@ wp-config.php
 /frontend/node_modules/
 /frontend/dist/
 /frontend/.astro/
+/frontend/.vercel/
 /frontend/public/media/*
 !/frontend/public/media/.gitkeep
 

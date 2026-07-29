@@ -1,30 +1,25 @@
 # NalarTekno Frontend
 
-Frontend publik statis untuk NalarTekno. WordPress menjadi CMS dan ruang editorial.
+Frontend publik SSR untuk NalarTekno. WordPress.com menjadi CMS dan sumber konten.
 
 ## Alur kerja
 
-1. Jalankan Apache dan MySQL melalui XAMPP.
-2. Tulis atau review artikel di `http://localhost/dgworld/wp-admin/`.
-3. Dari folder `frontend`, jalankan:
-
-```bash
-npm run publish
-```
-
-Perintah tersebut mengambil artikel berstatus `publish`, menyimpan media secara lokal, lalu membangun situs statis ke folder `dist`.
+1. Tulis atau review artikel di `https://nalartekno.wordpress.com/wp-admin/`.
+2. Terbitkan artikel di WordPress.
+3. Frontend membaca perubahan melalui WordPress API. Cache HTML berlaku 10 detik.
 
 ## Menjalankan lokal
 
 ```bash
 npm install
-npm run sync
 npm run dev
 ```
 
+Gunakan `npm run sync` hanya untuk memperbarui cadangan `src/data/site.json`.
+
 ## AI agent membuat draft
 
-Buat akun WordPress khusus dengan role `Contributor` atau `Author`, lalu buat Application Password. Salin `.env.example` menjadi `.env` dan isi kredensialnya.
+Skrip draft dengan Application Password ditujukan untuk WordPress self-hosted. WordPress.com memerlukan OAuth2 dan akan dikonfigurasi terpisah sebelum AI agent diberi akses tulis.
 
 Format input:
 
@@ -53,6 +48,7 @@ Set environment variable:
 
 ```text
 PUBLIC_SITE_URL=https://domain-kamu.vercel.app
+WP_BASE_URL=https://nalartekno.wordpress.com
 ```
 
-Konten hasil sinkronisasi berada di `src/data/site.json`, sehingga Vercel tidak perlu mengakses WordPress lokal saat build.
+Route artikel, kategori, halaman, pencarian, dan sitemap dirender saat diminta. Jika WordPress API gagal, frontend memakai data terakhir dari `src/data/site.json`.

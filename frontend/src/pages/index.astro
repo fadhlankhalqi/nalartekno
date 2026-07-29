@@ -2,8 +2,12 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PostCard from "../components/PostCard.astro";
 import PostVisual from "../components/PostVisual.astro";
-import { posts, visibleCategories, formatDate, postCategory } from "../lib/site";
+import { visibleCategories, formatDate, postCategory } from "../lib/site";
+import { getSiteData, setContentCacheHeaders } from "../lib/wordpress";
 
+setContentCacheHeaders(Astro.response);
+const { posts, categories } = await getSiteData();
+const categoryList = visibleCategories(categories);
 const [featured, ...rest] = posts;
 const sidePosts = rest.slice(0, 2);
 const categoryStyles = ["basic", "intermediate", "advanced", "expert"];
@@ -18,7 +22,7 @@ const categoryStyles = ["basic", "intermediate", "advanced", "expert"];
         <div class="hero-actions"><a class="primary-button" href="#terbaru">Baca artikel terbaru</a><a class="secondary-button" href="#kategori">Jelajahi kategori</a></div>
       </div>
       <ol class="level-map">
-        {visibleCategories.slice(0, 6).map((category, index) => <li class={categoryStyles[index % categoryStyles.length]}><span>{String(index + 1).padStart(2, "0")}</span><strong>{category.name}</strong></li>)}
+        {categoryList.slice(0, 6).map((category, index) => <li class={categoryStyles[index % categoryStyles.length]}><span>{String(index + 1).padStart(2, "0")}</span><strong>{category.name}</strong></li>)}
       </ol>
     </section>
 
@@ -37,9 +41,9 @@ const categoryStyles = ["basic", "intermediate", "advanced", "expert"];
 
     <section id="kategori" class="content-section">
       <div class="section-heading"><h2>Jelajahi kategori</h2></div>
-      <p class="section-intro">Kategori dikelola dari WordPress dan diperbarui saat situs dibangun ulang.</p>
+      <p class="section-intro">Kategori dikelola dari WordPress dan diperbarui otomatis setelah diterbitkan.</p>
       <div class="learning-levels">
-        {visibleCategories.map((category, index) => {
+        {categoryList.map((category, index) => {
           const categoryPosts = posts.filter((post) => post.categories.some((item) => item.id === category.id));
           return (
             <article class={`learning-level ${categoryStyles[index % categoryStyles.length]}`}>

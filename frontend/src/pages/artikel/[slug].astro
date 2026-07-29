@@ -1,24 +1,31 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import PostVisual from "../../components/PostVisual.astro";
-import { posts, formatDate, postCategory, type Post } from "../../lib/site";
+import { formatDate, postCategory } from "../../lib/site";
+import { getSiteData, setContentCacheHeaders } from "../../lib/wordpress";
 
-export function getStaticPaths() {
-  return posts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
+setContentCacheHeaders(Astro.response);
+const { slug } = Astro.params;
+const { posts } = await getSiteData();
+const post = posts.find((candidate) => candidate.slug === slug);
+
+if (!post) {
+  Astro.response.status = 404;
+  return Astro.rewrite("/404/");
 }
 
-interface Props { post: Post; }
-const { post } = Astro.props;
 const category = postCategory(post);
-const related = posts.filter((candidate) => candidate.id !== post.id && candidate.categories.some((item) => item.slug === category.slug)).slice(0, 3);
+const related = posts
+  .filter((candidate) => candidate.id !== post.id && candidate.categories.some((item) => item.slug === category.slug))
+  .slice(0, 3);
 ---
 <BaseLayout title={`${post.title} | NalarTekno`} description={post.excerpt} image={post.featuredImage}>
   <main id="main-content" class="container article-shell">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Beranda</a><span>/</span><a href={`/kategori/${category.slug}/`}>{category.name}</a></nav>
-    <article data-pagefind-body>
+    <article>
       <header class="article-header">
         <span class="badge">{category.name}</span>
-        <h1 data-pagefind-meta="title">{post.title}</h1>
+        <h1>{post.title}</h1>
         <p>Oleh {post.author} · {formatDate(post.date)} · {post.readingMinutes} menit baca</p>
       </header>
       <div class="article-image"><PostVisual image={post.featuredImage} alt={post.featuredAlt} category={category.name} eager /></div>
