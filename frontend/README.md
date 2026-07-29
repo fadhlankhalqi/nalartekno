@@ -1,6 +1,6 @@
 # NalarTekno Frontend
 
-Frontend publik statis untuk NalarTekno. WordPress lokal tetap menjadi CMS dan ruang editorial.
+Frontend publik statis untuk NalarTekno. WordPress menjadi CMS dan ruang editorial.
 
 ## Alur kerja
 

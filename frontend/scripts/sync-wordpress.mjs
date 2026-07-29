@@ -2,6 +2,13 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { basename, extname } from "node:path";
 
 const wpBase = (process.env.WP_BASE_URL || "http://127.0.0.1/dgworld").replace(/\/$/, "");
+const wpHostname = new URL(wpBase).hostname;
+const wpApiBase = (
+  process.env.WP_API_URL ||
+  (wpHostname.endsWith(".wordpress.com")
+    ? `https://public-api.wordpress.com/wp/v2/sites/${wpHostname}`
+    : `${wpBase}/wp-json/wp/v2`)
+).replace(/\/$/, "");
 const root = new URL("../", import.meta.url);
 const mediaDir = new URL("public/media/", root);
 const dataFile = new URL("src/data/site.json", root);
@@ -9,7 +16,7 @@ const dataFile = new URL("src/data/site.json", root);
 await mkdir(mediaDir, { recursive: true });
 
 async function getAll(endpoint) {
-  const response = await fetch(`${wpBase}/wp-json/wp/v2/${endpoint}${endpoint.includes("?") ? "&" : "?"}per_page=100&_embed=1`);
+  const response = await fetch(`${wpApiBase}/${endpoint}${endpoint.includes("?") ? "&" : "?"}per_page=100&_embed=1`);
   if (!response.ok) throw new Error(`WordPress API ${response.status}: ${endpoint}`);
   return response.json();
 }
