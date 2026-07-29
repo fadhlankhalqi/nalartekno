@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import { levels } from "../lib/site";
+import { visibleCategories } from "../lib/site";
 
 interface Props {
   title?: string;
@@ -49,8 +49,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Buka menu"><i></i><i></i></button>
         <nav id="main-nav" aria-label="Menu utama">
           <a href="/">Beranda</a>
-          <a href="/#berita">Berita Digital</a>
-          <a href="/#jalur-belajar">Tutorial</a>
+          <a href="/#terbaru">Artikel terbaru</a>
+          <a href="/#kategori">Kategori</a>
           <form action="/cari/" role="search">
             <label class="sr-only" for="nav-search">Cari tutorial atau berita</label>
             <input id="nav-search" name="q" type="search" placeholder="Cari topik…" />
@@ -60,16 +60,16 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       </div>
       <div class="level-nav">
         <div class="container level-scroll">
-          <span>Jalur belajar:</span>
-          {levels.map((level) => <a href={`/kategori/${level.slug}/`}>Tutorial {level.label}</a>)}
+          <span>Kategori:</span>
+          {visibleCategories.map((category) => <a href={`/kategori/${category.slug}/`}>{category.name}</a>)}
         </div>
       </div>
     </header>
     <slot />
     <footer>
       <div class="container footer-grid">
-        <div><h2>NalarTekno</h2><p>Berita digital dan tutorial dari Basic sampai Expert.</p></div>
-        <div><h2>Kategori</h2>{levels.map((level) => <a href={`/kategori/${level.slug}/`}>Tutorial {level.label}</a>)}</div>
+        <div><h2>NalarTekno</h2><p>Berita dan pembelajaran teknologi dalam bahasa yang mudah dipahami.</p></div>
+        <div><h2>Kategori</h2>{visibleCategories.map((category) => <a href={`/kategori/${category.slug}/`}>{category.name}</a>)}</div>
         <div><h2>Informasi</h2><a href="/tentang/">Tentang NalarTekno</a><a href="/pedoman-editorial/">Pedoman Editorial</a><a href="/kontak/">Kontak</a><a href="/kebijakan-privasi/">Kebijakan Privasi</a></div>
       </div>
       <div class="container copyright">© {new Date().getFullYear()} NALARTEKNO. SEMUA HAK DILINDUNGI.</div>

@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "sync": "node scripts/sync-wordpress.mjs",
+    "prebuild": "node scripts/sync-if-configured.mjs",
     "build": "astro build && pagefind --site dist",
     "preview": "astro preview",
     "publish": "npm run sync && npm run build",
