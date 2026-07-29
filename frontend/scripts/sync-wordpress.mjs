@@ -108,7 +108,10 @@ for (let index = 0; index < rawPosts.length; index += 1) {
 }
 
 const data = {
-  generatedAt: new Date().toISOString(),
+  generatedAt: [...posts.map((post) => post.modified), ...rawPages.map((page) => page.modified)]
+    .filter(Boolean)
+    .sort()
+    .at(-1) || "1970-01-01T00:00:00.000Z",
   posts,
   categories: rawCategories.map(({ id, name, slug, count, description }) => ({ id, name, slug, count, description })),
   pages: await Promise.all(rawPages.map(async (page, index) => ({

@@ -1,248 +1,63 @@
 {
-  "generatedAt": "2026-07-28T06:56:20.939Z",
+  "generatedAt": "2026-07-29T21:43:41",
   "posts": [
     {
-      "id": 12,
-      "slug": "arsitektur-microservices-skalabilitas-tinggi",
-      "title": "Arsitektur Microservices & Skalabilitas Tinggi",
-      "excerpt": "Pelajari pola arsitektur microservices untuk sistem skala besar, termasuk service mesh dan observability.",
-      "content": "<p>Pelajari pola arsitektur microservices untuk sistem skala besar, termasuk service mesh dan observability.</p>\n",
-      "date": "2026-07-26T13:30:21",
-      "modified": "2026-07-26T13:30:21",
-      "author": "Tim NalarTekno",
+      "id": 3,
+      "slug": "hello-world",
+      "title": "Hello World!",
+      "excerpt": "Welcome to WordPress! This is your first post. Edit or delete it to take the first step in your blogging journey.",
+      "content": "\n<p class=\"wp-block-paragraph\">Welcome to WordPress! This is your first post. Edit or delete it to take the first step in your blogging journey.</p>\n",
+      "date": "2026-07-29T21:43:40",
+      "modified": "2026-07-29T21:43:40",
+      "author": "nalarteknoid",
       "categories": [
         {
-          "id": 7,
-          "name": "Tutorial Expert",
-          "slug": "tutorial-expert"
+          "id": 1,
+          "name": "Uncategorized",
+          "slug": "uncategorized"
         }
       ],
       "featuredImage": "",
-      "featuredAlt": "Arsitektur Microservices & Skalabilitas Tinggi",
-      "readingMinutes": 1
-    },
-    {
-      "id": 11,
-      "slug": "membangun-rest-api-dengan-node-js",
-      "title": "Membangun REST API dengan Node.js",
-      "excerpt": "Tutorial membangun REST API sederhana menggunakan Express.js dan menghubungkannya ke database.",
-      "content": "<p>Tutorial membangun REST API sederhana menggunakan Express.js dan menghubungkannya ke database.</p>\n",
-      "date": "2026-07-26T13:30:19",
-      "modified": "2026-07-26T13:30:19",
-      "author": "Tim NalarTekno",
-      "categories": [
-        {
-          "id": 6,
-          "name": "Tutorial Advanced",
-          "slug": "tutorial-advanced"
-        }
-      ],
-      "featuredImage": "",
-      "featuredAlt": "Membangun REST API dengan Node.js",
-      "readingMinutes": 1
-    },
-    {
-      "id": 10,
-      "slug": "belajar-html-css-dasar",
-      "title": "Belajar HTML & CSS Dasar",
-      "excerpt": "HTML dan CSS adalah fondasi membangun halaman web. Pelajari struktur dasar tag dan styling.",
-      "content": "<p>HTML dan CSS adalah fondasi membangun halaman web. Pelajari struktur dasar tag dan styling.</p>\n",
-      "date": "2026-07-26T13:30:17",
-      "modified": "2026-07-26T13:30:17",
-      "author": "Tim NalarTekno",
-      "categories": [
-        {
-          "id": 5,
-          "name": "Tutorial Intermediate",
-          "slug": "tutorial-intermediate"
-        }
-      ],
-      "featuredImage": "",
-      "featuredAlt": "Belajar HTML & CSS Dasar",
-      "readingMinutes": 1
-    },
-    {
-      "id": 9,
-      "slug": "cara-membuat-email-dan-mengenal-browser",
-      "title": "Cara Membuat Email dan Mengenal Browser",
-      "excerpt": "Panduan langkah demi langkah membuat akun email pertama dan mengenal fungsi dasar browser.",
-      "content": "<p>Panduan langkah demi langkah membuat akun email pertama dan mengenal fungsi dasar browser.</p>\n",
-      "date": "2026-07-26T13:30:15",
-      "modified": "2026-07-26T13:30:15",
-      "author": "Tim NalarTekno",
-      "categories": [
-        {
-          "id": 4,
-          "name": "Tutorial Basic",
-          "slug": "tutorial-basic"
-        }
-      ],
-      "featuredImage": "",
-      "featuredAlt": "Cara Membuat Email dan Mengenal Browser",
-      "readingMinutes": 1
-    },
-    {
-      "id": 8,
-      "slug": "apa-itu-internet-pengenalan-untuk-pemula",
-      "title": "Apa itu Internet? Pengenalan untuk Pemula",
-      "excerpt": "Internet adalah jaringan global yang menghubungkan miliaran perangkat. Artikel ini membahas dasar-dasar cara kerja internet.",
-      "content": "<p>Internet adalah jaringan global yang menghubungkan miliaran perangkat. Artikel ini membahas dasar-dasar cara kerja internet.</p>\n",
-      "date": "2026-07-26T13:30:13",
-      "modified": "2026-07-26T13:30:13",
-      "author": "Tim NalarTekno",
-      "categories": [
-        {
-          "id": 4,
-          "name": "Tutorial Basic",
-          "slug": "tutorial-basic"
-        }
-      ],
-      "featuredImage": "",
-      "featuredAlt": "Apa itu Internet? Pengenalan untuk Pemula",
-      "readingMinutes": 1
-    },
-    {
-      "id": 7,
-      "slug": "tren-keamanan-siber-2026-yang-wajib-diketahui",
-      "title": "Tren Keamanan Siber 2026 yang Wajib Diketahui",
-      "excerpt": "Ancaman siber terus berkembang. Berikut ringkasan tren keamanan digital yang perlu diwaspadai tahun ini.",
-      "content": "<p>Ancaman siber terus berkembang. Berikut ringkasan tren keamanan digital yang perlu diwaspadai tahun ini.</p>\n",
-      "date": "2026-07-26T13:30:12",
-      "modified": "2026-07-26T13:30:12",
-      "author": "Tim NalarTekno",
-      "categories": [
-        {
-          "id": 2,
-          "name": "Berita Digital",
-          "slug": "berita-digital"
-        }
-      ],
-      "featuredImage": "",
-      "featuredAlt": "Tren Keamanan Siber 2026 yang Wajib Diketahui",
-      "readingMinutes": 1
-    },
-    {
-      "id": 6,
-      "slug": "startup-lokal-rilis-fitur-baru-berbasis-cloud",
-      "title": "Startup Lokal Rilis Fitur Baru Berbasis Cloud",
-      "excerpt": "Sejumlah startup teknologi lokal kini merilis fitur berbasis cloud computing untuk meningkatkan skalabilitas layanan mereka.",
-      "content": "<p>Sejumlah startup teknologi lokal kini merilis fitur berbasis cloud computing untuk meningkatkan skalabilitas layanan mereka.</p>\n",
-      "date": "2026-07-26T13:30:10",
-      "modified": "2026-07-26T13:30:10",
-      "author": "Tim NalarTekno",
-      "categories": [
-        {
-          "id": 2,
-          "name": "Berita Digital",
-          "slug": "berita-digital"
-        }
-      ],
-      "featuredImage": "",
-      "featuredAlt": "Startup Lokal Rilis Fitur Baru Berbasis Cloud",
-      "readingMinutes": 1
-    },
-    {
-      "id": 5,
-      "slug": "ai-generatif-makin-dekat-ke-kehidupan-sehari-hari",
-      "title": "AI Generatif Makin Dekat ke Kehidupan Sehari-hari",
-      "excerpt": "Perkembangan AI generatif terus mempercepat berbagai aspek kehidupan digital, mulai dari asisten virtual hingga otomasi konten. Artikel ini membahas tren…",
-      "content": "<p>Perkembangan AI generatif terus mempercepat berbagai aspek kehidupan digital, mulai dari asisten virtual hingga otomasi konten.</p>\n<p>Artikel ini membahas tren terbaru dan dampaknya bagi pengguna internet di Indonesia.</p>\n",
-      "date": "2026-07-26T13:30:08",
-      "modified": "2026-07-26T13:30:08",
-      "author": "Tim NalarTekno",
-      "categories": [
-        {
-          "id": 2,
-          "name": "Berita Digital",
-          "slug": "berita-digital"
-        }
-      ],
-      "featuredImage": "",
-      "featuredAlt": "AI Generatif Makin Dekat ke Kehidupan Sehari-hari",
+      "featuredAlt": "Hello World!",
       "readingMinutes": 1
     }
   ],
   "categories": [
     {
-      "id": 2,
-      "name": "Berita Digital",
-      "slug": "berita-digital",
-      "count": 3,
-      "description": ""
-    },
-    {
-      "id": 3,
-      "name": "Tutorial",
-      "slug": "tutorial",
+      "id": 14067,
+      "name": "AI",
+      "slug": "ai",
       "count": 0,
       "description": ""
     },
     {
-      "id": 6,
-      "name": "Tutorial Advanced",
-      "slug": "tutorial-advanced",
-      "count": 1,
+      "id": 2151,
+      "name": "Berita",
+      "slug": "berita",
+      "count": 0,
       "description": ""
     },
     {
-      "id": 4,
-      "name": "Tutorial Basic",
-      "slug": "tutorial-basic",
-      "count": 2,
-      "description": ""
-    },
-    {
-      "id": 7,
-      "name": "Tutorial Expert",
-      "slug": "tutorial-expert",
-      "count": 1,
-      "description": ""
-    },
-    {
-      "id": 5,
-      "name": "Tutorial Intermediate",
-      "slug": "tutorial-intermediate",
-      "count": 1,
+      "id": 21,
+      "name": "Games",
+      "slug": "games",
+      "count": 0,
       "description": ""
     },
     {
       "id": 1,
       "name": "Uncategorized",
       "slug": "uncategorized",
-      "count": 0,
+      "count": 1,
       "description": ""
     }
   ],
   "pages": [
     {
-      "id": 19,
-      "slug": "kebijakan-privasi",
-      "title": "Kebijakan Privasi",
-      "content": "<p>NalarTekno menghargai privasi pembaca. Halaman ini menjelaskan data yang dikumpulkan, alasan penggunaannya, layanan pihak ketiga yang digunakan, dan cara pembaca mengajukan permintaan terkait data pribadi.</p>\n<p>Lengkapi kebijakan ini sesuai layanan analitik, periklanan, formulir, dan cookie yang digunakan sebelum situs dipublikasikan.</p>\n"
-    },
-    {
-      "id": 18,
-      "slug": "kontak",
-      "title": "Kontak",
-      "content": "<p>Gunakan halaman ini untuk menyampaikan pertanyaan, koreksi artikel, atau usulan topik kepada tim NalarTekno.</p>\n<p>Tambahkan alamat email editorial atau formulir kontak resmi melalui editor WordPress sebelum situs dipublikasikan.</p>\n"
-    },
-    {
-      "id": 17,
-      "slug": "pedoman-editorial",
-      "title": "Pedoman Editorial",
-      "content": "<p>NalarTekno menerbitkan tutorial dan berita teknologi yang mengutamakan ketepatan, konteks, dan manfaat praktis.</p>\n<h2>Prinsip kami</h2>\n<ul>\n<li>Memeriksa fakta dan sumber sebelum publikasi.</li>\n<li>Membedakan berita, opini, dan materi sponsor dengan jelas.</li>\n<li>Memperbarui tutorial ketika teknologi atau praktik berubah.</li>\n<li>Memperbaiki kesalahan secara terbuka dan secepat mungkin.</li>\n</ul>\n"
-    },
-    {
-      "id": 16,
-      "slug": "tentang",
-      "title": "Tentang NalarTekno",
-      "content": "<p>NalarTekno membantu pembaca Indonesia mempelajari teknologi secara bertahap, dari fondasi digital sampai pengembangan sistem berskala.</p>\n<h2>Cara kami menyusun materi</h2>\n<p>Tutorial dikelompokkan dalam empat level: Basic, Intermediate, Advanced, dan Expert. Setiap materi mengutamakan penjelasan yang jelas, contoh praktis, dan jalur belajar yang mudah dilanjutkan.</p>\n"
-    },
-    {
-      "id": 2,
-      "slug": "sample-page",
-      "title": "Sample Page",
-      "content": "\n<p class=\"wp-block-paragraph\">This is an example page. It&#8217;s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:</p>\n\n\n\n<blockquote class=\"wp-block-quote is-layout-flow wp-block-quote-is-layout-flow\">\n\n<p class=\"wp-block-paragraph\">Hi there! I&#8217;m a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like pi&#241;a coladas. (And gettin&#8217; caught in the rain.)</p>\n\n</blockquote>\n\n\n\n<p class=\"wp-block-paragraph\">&#8230;or something like this:</p>\n\n\n\n<blockquote class=\"wp-block-quote is-layout-flow wp-block-quote-is-layout-flow\">\n\n<p class=\"wp-block-paragraph\">The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</p>\n\n</blockquote>\n\n\n\n<p class=\"wp-block-paragraph\">As a new WordPress user, you should go to <a href=\"http://localhost/dgworld/wp-admin/\">your dashboard</a> to delete this page and create new pages for your content. Have fun!</p>\n"
+      "id": 1,
+      "slug": "about",
+      "title": "About",
+      "content": "\n<p class=\"wp-block-paragraph\">This is an example of a page. Unlike posts, which are displayed on your blog’s front page in the order they’re published, pages are better suited for more timeless content that you want to be easily accessible, like your About or Contact information. Click the Edit link to make changes to this page or <a title=\"Direct link to Add New Page in your Dashboard\" href=\"https://wordpress.com/page/256438519/new/\">add another page</a>.</p>\n"
     }
   ]
 }
