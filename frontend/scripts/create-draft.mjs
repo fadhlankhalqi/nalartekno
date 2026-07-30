@@ -66,6 +66,7 @@ if (!article.title || !article.content) {
   console.error("JSON wajib memiliki title dan content.");
   process.exit(1);
 }
+const postStatus = article.status === "publish" ? "publish" : "draft";
 
 async function parseResponse(response) {
   const text = await response.text();
@@ -175,7 +176,7 @@ try {
     article.featured_image,
     article.featured_image_alt
   );
-  console.log("Membuat draft WordPress...");
+  console.log(postStatus === "publish" ? "Menerbitkan artikel WordPress..." : "Membuat draft WordPress...");
   const response = await fetch(`${apiBase}/posts`, {
     method: "POST",
     headers: { ...authHeaders, "Content-Type": "application/json" },
@@ -187,11 +188,15 @@ try {
       categories: article.categories || [],
       tags: tagIds,
       featured_media: featuredMedia,
-      status: "draft"
+      status: postStatus
     })
   });
   const result = await parseResponse(response);
-  console.log(`Draft berhasil dibuat: ${wpBase}/wp-admin/post.php?post=${result.id}&action=edit`);
+  console.log(
+    postStatus === "publish"
+      ? `Artikel berhasil diterbitkan: ${result.link}`
+      : `Draft berhasil dibuat: ${wpBase}/wp-admin/post.php?post=${result.id}&action=edit`
+  );
 } catch (error) {
   console.error(error.message);
   process.exit(1);
